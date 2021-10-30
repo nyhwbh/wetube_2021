@@ -26,12 +26,12 @@ let videos = [
 ];
 
 export const trending = (req, res) => {
-  res.render("home", {pageTitle:"Home"}, videos);
+  res.render("home", {pageTitle:"Home", videos });
 };
 export const see = (req, res) => {
   const { id } = req.params;
   const video = videos[id - 1];
-  return res.render("watch", { pageTitle: `Watching ${video.title}` });
+  return res.render("watch", { pageTitle: `Watching ${video.title}`, video });
 };
 export const getEdit = (req, res) => {
   const { id } = req.params;
