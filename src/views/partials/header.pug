@@ -3,7 +3,7 @@ header
         i.fab.fa-youtube
     nav
         ul
-             li
+            li
                 a(href="/search")
                     i.fas.fa-search
             if loggedIn
@@ -18,7 +18,11 @@ header
                         if loggedInUser.avatarUrl === ""
                             span 😀
                         else
-                            img.header__avatar(src="/" + loggedInUser.avatarUrl)
+                            if loggedInUser.avatarUrl
+                                if loggedInUser.avatarUrl.includes("github")
+                                    img.header__avatar(src=loggedInUser.avatarUrl)
+                                else
+                                    img.header__avatar(src=loggedInUser.avatarUrl)
             else
                 li
                     a(href="/login")  Login                        

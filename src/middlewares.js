@@ -25,7 +25,7 @@ export const localsMiddleware = (req, res, next) => {
     }
   };
 
-  export const uploadFiles = multer({ 
+  export const avatarUpload  = multer({ 
     dest: "uploads/avatars/",
     limits: {
       fileSize: 3000000,
