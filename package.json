@@ -7,8 +7,10 @@
     "url": "git+https://github.com/nyhwbh/wetube_2021.git"
   },
   "scripts": {
-    "dev:server": "nodemon",
-    "dev:assets": "webpack"
+    "start" : "node build/init.js",
+    "build:server" : "babel src -d build",
+    "dev:server" : "nodemon",
+    "dev:assets" : "webpack"
   },
   "author": "nyh",
   "license": "MIT",
@@ -32,6 +34,7 @@
     "upgrade": "^1.1.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
     "@babel/core": "^7.15.8",
     "@babel/node": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
